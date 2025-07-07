@@ -1,5 +1,7 @@
 import pandas as pd
 import streamlit as st
+from typing import Tuple
+
 
 def process_lap_data(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -66,7 +68,9 @@ def get_race_lap_times(df: pd.DataFrame) -> pd.DataFrame:
     
     return result
 
-def build_race_df(drivers_df: pd.DataFrame, times_df: pd.DataFrame, results_df: pd.DataFrame) -> pd.DataFrame:
+def build_race_df(drivers_df: pd.DataFrame,
+                  times_df: pd.DataFrame,
+                  results_df: pd.DataFrame) -> Tuple[pd.DataFrame, dict, list]:
     """
     Build a DataFrame for the race with driver, lap, and result information.
 
