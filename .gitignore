@@ -1,4 +1,4 @@
-f1_cache/
+cache/
 __pycache__/
 *.pyc
 .DS_Store
